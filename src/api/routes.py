@@ -20,7 +20,7 @@ from cloudinary.uploader import upload, destroy
 api = Blueprint('api', __name__)
 
 # Allow CORS requests to this API
-CORS(api)
+CORS(api, resources={r"/api/*": {"origins": "*"}})
 
 # Configuration for Cloudinary
 CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
