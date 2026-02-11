@@ -21,6 +21,7 @@ typing-extensions = "*"
 flask-jwt-extended = "*"
 pyeasyencrypt = "*"
 requests = "*"
+pyjwt = "<2.10"
 
 [requires]
 python_version = "3.12"

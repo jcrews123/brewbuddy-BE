@@ -185,12 +185,12 @@ class Beer(db.Model):
 
     favorited_by_users = db.relationship("FavoriteBeers", back_populates="beer", foreign_keys="FavoriteBeers.favorited_beer_id")
 
-    def __init__(self, beer_name, type, flavor, ABV, brewery_Id):
-        self.beer_name = beer_name
-        self.type = type
-        self.flavor = flavor
-        self.ABV = ABV
-        self.brewery_Id = brewery_Id
+    # def __init__(self, beer_name, type, flavor, ABV, brewery_Id):
+    #     self.beer_name = beer_name
+    #     self.type = type
+    #     self.flavor = flavor
+    #     self.ABV = ABV
+    #     self.brewery_Id = brewery_Id
 
     # added repr to help with debugging by providing a readable string representation of the model instances
     #def __repr__(self):

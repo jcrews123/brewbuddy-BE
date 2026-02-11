@@ -328,8 +328,6 @@ def handle_get_favorite_beers():
 @jwt_required()
 def handle_get_favorite_breweries():
     current_user = get_current_user()
-    if not current_user:
-        return jsonify({"error": "User not authenticated"}), 401
 
     # Fetch the favorite brewery records
     favorite_breweries = FavoriteBreweries.query.filter_by(owner_id=current_user.id).all()
