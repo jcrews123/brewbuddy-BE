@@ -2,15 +2,15 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint, session
-from api.models import db, User, Beer, Brewery, FavoriteUsers, FavoriteBeers, FavoriteBreweries, PointTransaction, UserImage, BreweryReview, BeerReview, UserRewards
-from api.utils import generate_sitemap, APIException
+from src.models import db, User, Beer, Brewery, FavoriteUsers, FavoriteBeers, FavoriteBreweries, PointTransaction, UserImage, BreweryReview, BeerReview, UserRewards
+from src.utils import generate_sitemap, APIException
 from flask_cors import CORS
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required
 import hashlib
 from datetime import datetime, timedelta
 from sqlalchemy import select
 from pyeasyencrypt.pyeasyencrypt import encrypt_string, decrypt_string
-from api.send_email import send_email
+from src.send_email import send_email
 import json, os
 from dotenv import load_dotenv
 load_dotenv()
